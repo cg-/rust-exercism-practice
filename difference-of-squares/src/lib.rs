@@ -1,17 +1,9 @@
 pub fn square_of_sum(n: u32) -> u32 {
-    let mut res = 0 as u32;
-    for i in 1..=n {
-        res += i;
-    }
-    res.pow(2)
+    (1..=n).fold(0, |acc, n| acc + n).pow(2)
 }
 
 pub fn sum_of_squares(n: u32) -> u32 {
-    let mut res = 0 as u32;
-    for i in 1..=n {
-        res += (i.pow(2)) as u32;
-    }
-    res
+    (1..=n).fold(0, |acc, n| acc + n.pow(2))
 }
 
 pub fn difference(n: u32) -> u32 {
