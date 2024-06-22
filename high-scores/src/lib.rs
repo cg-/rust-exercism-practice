@@ -30,9 +30,12 @@ impl HighScores{
         temp.reverse();
         match temp.len() {
             0 => Vec::new(),
-            1 => temp.first_chunk::<1>().expect("missing 3 scores").to_vec(),
-            2 => temp.first_chunk::<2>().expect("missing 3 scores").to_vec(),
-            _ => temp.first_chunk::<3>().expect("missing 3 scores").to_vec(),
+            1 | 2 => {
+                temp
+            },
+            _ => {
+                temp[..=2].to_vec()
+            },
         }
     }
 }
