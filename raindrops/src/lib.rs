@@ -8,15 +8,15 @@
 pub fn raindrops(n: u32) -> String {
     let mut to_ret = String::new();
     let mut found = false;
-    if n % 3{
+    if n % 3 == 0{
         found = true;
         to_ret = format!("{}{}",to_ret, "Pling");
     }
-    if n % 5{
+    if n % 5 == 0{
         found = true;
         to_ret = format!("{}{}",to_ret, "Plang");
     }
-    if n % 7{
+    if n % 7 == 0{
         found = true;
         to_ret = format!("{}{}",to_ret, "Plong");
     }
